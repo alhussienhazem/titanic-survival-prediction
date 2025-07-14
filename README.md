@@ -98,59 +98,39 @@ jupyter notebook
 
 ---
 
-### **🔍 Key Insights:**
-
-• **SMOTE Implementation**: Successfully improved model performance, especially for Decision Tree (+1.11% accuracy)
-
-• **Best Overall Performance**: XGBoost with SMOTE achieved 82.12% accuracy
-
-• **Class Balance**: SMOTE helped improve detection of survivors (minority class)
-
-• **Robust Evaluation**: All models demonstrated good balance between precision and recall
-
-• **Recall Improvement**: Significant improvement in survivor detection across all models
+### **🔍 Key Insights**
+- **SMOTE Implementation**: Successfully improved model performance, especially for Decision Tree (+1.11% accuracy)
+- **Best Overall Performance**: XGBoost with SMOTE achieved 82.12% accuracy
+- **Class Balance**: SMOTE helped improve detection of survivors (minority class)
+- **Robust Evaluation**: All models demonstrated good balance between precision and recall
+- **Recall Improvement**: Significant improvement in survivor detection across all models
 
 ---
 
 ## 🧾 Project Details
 
-### **🔧 Enhanced Data Preprocessing:**
+**🔧 Enhanced Data Preprocessing:**
+- Duplicate removal and validation
+- Improved missing value handling
+- Enhanced feature encoding (one-hot encoding)
 
-◦ Duplicate removal and validation
+**🧬 SMOTE Implementation:**
+- Applied to training data to balance classes
+- Improved minority class detection
+- Before/after performance comparison
 
-◦ Improved missing value handling
+**📊 Comprehensive Evaluation:**
+- Detailed classification reports
+- Confusion matrix visualizations
+- Multiple performance metrics
 
-◦ Enhanced feature encoding (one-hot encoding)
-
-### **🧬 SMOTE Implementation:**
-
-◦ Applied to training data to balance classes
-
-◦ Improved minority class detection
-
-◦ Before/after performance comparison
-
-### **📊 Comprehensive Evaluation:**
-
-◦ Detailed classification reports
-
-◦ Confusion matrix visualizations
-
-◦ Multiple performance metrics
-
-### **📋 Notebook Structure:**
-
-◦ Data Preprocessing & Validation
-
-◦ Exploratory Data Analysis
-
-◦ Feature Engineering
-
-◦ SMOTE Application
-
-◦ Model Training & Evaluation
-
-◦ Results Comparison
+**📋 Notebook Structure:**
+- Data Preprocessing & Validation
+- Exploratory Data Analysis
+- Feature Engineering
+- SMOTE Application
+- Model Training & Evaluation
+- Results Comparison
 
 ---
 
