@@ -10,6 +10,7 @@ This notebook builds machine learning models to predict passenger survival on th
 - [🎯 Project Goals](#-project-goals)
 - [🧪 Methods](#-methods)
 - [📈 Results](#-results)
+- [🔍 Key Insights](#-key-insights)
 - [🧾 Project Details](#-project-details)
 - [🪪 License](#-license)
 
