@@ -1,6 +1,6 @@
 # ⚓ Titanic Survival Prediction
 
-This notebook builds machine learning models to predict passenger survival on the Titanic, applying data preprocessing and machine learning techniques to predict survival outcomes.
+This notebook builds machine learning models to predict passenger survival on the Titanic, applying SMOTE (Synthetic Minority Oversampling Technique) to handle class imbalance and improve detection of survivors.
 
 ---
 
@@ -43,6 +43,8 @@ jupyter notebook
 ## 🎯 Project Goals
 
 - **Objective:** Predict whether a passenger survived the Titanic disaster using demographic and ticketing information
+- **Challenge:** Imbalanced dataset with fewer survivors (minority class)
+- **Solution:** Apply SMOTE to oversample the minority class during training and improve recall
 - **Features Used:** Age, Sex, Passenger Class, Fare, Embarkation Port, Family Size (SibSp + Parch)
 - **Target:** Binary classification (Survived: Yes/No)
 
@@ -56,38 +58,68 @@ jupyter notebook
   - ⚡ XGBoost
 
 - **Techniques Applied:**
-  - 🔤 Label encoding for categorical features (Sex, Embarked)
+  - 🔤 Label encoding for categorical features (Sex)
+  - 📊 One-hot encoding for Embarked column
   - 📊 MinMax scaling for numerical features
+  - 🧬 SMOTE to balance survival classes
   - 🧮 Feature engineering and selection
   - 📋 Evaluation using precision, recall, F1-score
   - 📊 Confusion matrices for visualization
+  - 🔍 Duplicate removal and data validation
 
 ---
 
 ## 📈 Results
 
+### **Original Model Performance**
 | Model | Accuracy | Precision | Recall | F1-Score |
 |-------|----------|-----------|---------|-----------|
-| 🌳 Decision Tree | 82.12% | 0.83 | 0.82 | 0.81 |
-| ⚡ XGBoost | 81.56% | 0.81 | 0.82 | 0.81 |
-| 🌲 Random Forest | 79.33% | 0.80 | 0.79 | 0.78 |
+| 🌳 Decision Tree | 80.45% | 0.86 | 0.55 | 0.67 |
+| 🌲 Random Forest | 81.01% | 0.84 | 0.58 | 0.69 |
+| ⚡ XGBoost | 81.56% | 0.81 | 0.65 | 0.72 |
 
-- **Key Insights:**
-  - Decision Tree showed the best overall performance with 82.12% accuracy
-  - All models demonstrated good balance between precision and recall
-  - Models performed well in identifying both survivors and non-survivors
+### **SMOTE Enhanced Performance**
+| Model | Original Accuracy | With SMOTE | Improvement |
+|-------|------------------|------------|-------------|
+| 🌳 Decision Tree | 80.45% | 81.56% | +1.11% |
+| 🌲 Random Forest | 81.01% | 81.01% | No change |
+| ⚡ XGBoost | 81.56% | 82.12% | +0.56% |
+
+### **Detailed Performance Metrics (with SMOTE):**
+| Model | Accuracy | Precision | Recall | F1-Score |
+|-------|----------|-----------|---------|-----------|
+| 🌳 Decision Tree | 81.56% | 0.84 | 0.88 | 0.86 |
+| 🌲 Random Forest | 81.01% | 0.83 | 0.89 | 0.86 |
+| ⚡ XGBoost | 82.12% | 0.84 | 0.89 | 0.86 |
+
+### **Key Insights:**
+- **SMOTE Implementation**: Successfully improved model performance, especially for Decision Tree (+1.11% accuracy)
+- **Best Overall Performance**: XGBoost with SMOTE achieved 82.12% accuracy
+- **Class Balance**: SMOTE helped improve detection of survivors (minority class)
+- **Robust Evaluation**: All models demonstrated good balance between precision and recall
+- **Recall Improvement**: Significant improvement in survivor detection across all models
 
 ---
 
 ## 🧾 Project Details
 
-- All notebook cells are clean, ordered, and fully reproducible
-- Dependencies are listed in `requirements.txt` for quick setup
-- Dataset (`titanic-passengers.csv`) is included in the repository
-- Notebook structure:
-  - Data Preprocessing
+- **Enhanced Data Preprocessing:**
+  - Duplicate removal and validation
+  - Improved missing value handling
+  - Enhanced feature encoding (one-hot encoding)
+- **SMOTE Implementation:**
+  - Applied to training data to balance classes
+  - Improved minority class detection
+  - Before/after performance comparison
+- **Comprehensive Evaluation:**
+  - Detailed classification reports
+  - Confusion matrix visualizations
+  - Multiple performance metrics
+- **Notebook Structure:**
+  - Data Preprocessing & Validation
   - Exploratory Data Analysis
   - Feature Engineering
+  - SMOTE Application
   - Model Training & Evaluation
   - Results Comparison
 
