@@ -78,12 +78,16 @@ jupyter notebook
 | 🌲 Random Forest | 81.01% | 0.84 | 0.58 | 0.69 |
 | ⚡ XGBoost | 81.56% | 0.81 | 0.65 | 0.72 |
 
+---
+
 ### **SMOTE Enhanced Performance**
 | Model | Original Accuracy | With SMOTE | Improvement |
 |-------|------------------|------------|-------------|
 | 🌳 Decision Tree | 80.45% | 81.56% | +1.11% |
 | 🌲 Random Forest | 81.01% | 81.01% | No change |
 | ⚡ XGBoost | 81.56% | 82.12% | +0.56% |
+
+---
 
 ### **Detailed Performance Metrics (with SMOTE):**
 | Model | Accuracy | Precision | Recall | F1-Score |
@@ -92,36 +96,41 @@ jupyter notebook
 | 🌲 Random Forest | 81.01% | 0.83 | 0.89 | 0.86 |
 | ⚡ XGBoost | 82.12% | 0.84 | 0.89 | 0.86 |
 
-### **Key Insights:**
-- **SMOTE Implementation**: Successfully improved model performance, especially for Decision Tree (+1.11% accuracy)
-- **Best Overall Performance**: XGBoost with SMOTE achieved 82.12% accuracy
-- **Class Balance**: SMOTE helped improve detection of survivors (minority class)
-- **Robust Evaluation**: All models demonstrated good balance between precision and recall
-- **Recall Improvement**: Significant improvement in survivor detection across all models
+---
+
+### **🔍 Key Insights:**
+• **SMOTE Implementation**: Successfully improved model performance, especially for Decision Tree (+1.11% accuracy)
+• **Best Overall Performance**: XGBoost with SMOTE achieved 82.12% accuracy
+• **Class Balance**: SMOTE helped improve detection of survivors (minority class)
+• **Robust Evaluation**: All models demonstrated good balance between precision and recall
+• **Recall Improvement**: Significant improvement in survivor detection across all models
 
 ---
 
 ## 🧾 Project Details
 
-- **Enhanced Data Preprocessing:**
-  - Duplicate removal and validation
-  - Improved missing value handling
-  - Enhanced feature encoding (one-hot encoding)
-- **SMOTE Implementation:**
-  - Applied to training data to balance classes
-  - Improved minority class detection
-  - Before/after performance comparison
-- **Comprehensive Evaluation:**
-  - Detailed classification reports
-  - Confusion matrix visualizations
-  - Multiple performance metrics
-- **Notebook Structure:**
-  - Data Preprocessing & Validation
-  - Exploratory Data Analysis
-  - Feature Engineering
-  - SMOTE Application
-  - Model Training & Evaluation
-  - Results Comparison
+• **🔧 Enhanced Data Preprocessing:**
+  ◦ Duplicate removal and validation
+  ◦ Improved missing value handling
+  ◦ Enhanced feature encoding (one-hot encoding)
+
+• **🧬 SMOTE Implementation:**
+  ◦ Applied to training data to balance classes
+  ◦ Improved minority class detection
+  ◦ Before/after performance comparison
+
+• **📊 Comprehensive Evaluation:**
+  ◦ Detailed classification reports
+  ◦ Confusion matrix visualizations
+  ◦ Multiple performance metrics
+
+• **📋 Notebook Structure:**
+  ◦ Data Preprocessing & Validation
+  ◦ Exploratory Data Analysis
+  ◦ Feature Engineering
+  ◦ SMOTE Application
+  ◦ Model Training & Evaluation
+  ◦ Results Comparison
 
 ---
 
